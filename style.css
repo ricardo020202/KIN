@@ -89,8 +89,8 @@ body{
         border-radius: 700px;
         background: #464646;
         position: absolute;
-        top: 10%;
-        right: -25%;
+        top: 15%;
+        right: -40%;
     }
 }
 
@@ -106,7 +106,7 @@ body{
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
     .circle{
         width: 950px;
         height: 950px;
@@ -150,5 +150,23 @@ body{
 .nosotros{
     font-size: 40px;
     font-weight: semi-bold;
+    color: black;
+}
+
+.up{
+    font-size: 20px;
+    background-color: #D9D9D9;
+    width: 20vw;
+    height: 40vh;
+    border-radius: 10px;
+    color: black;
+}
+
+.down{
+    font-size: 20px;
+    background-color: #D9D9D9;
+    width: 100vw;
+    height: 2vh;
+    border-radius: 10px;
     color: black;
 }
