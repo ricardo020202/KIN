@@ -1,0 +1,53 @@
+/* * { outline: 1px solid red; } */
+
+body {
+    height: 10000px;
+}
+
+#myDIV {
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+    border-bottom: 692px solid transparent;
+    transform-origin: 50% 68%;
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+
+.text {
+    position: absolute;
+    transition: transform 0.5s;
+
+}
+
+h2{
+    font-size: 50px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+#top {
+    top: -50px;
+    left: -65px;
+}
+
+#bottom-left {
+    bottom: -750px;
+    left: -455px;
+}
+
+#bottom-right {
+    bottom: -750px;
+    right: -455px;
+}
+
+.spacer {
+    height: 1000px;
+}

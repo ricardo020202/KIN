@@ -1,0 +1,154 @@
+/* * { outline: 1px solid red; } */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Banner*/
+.bg-image {
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    filter: blur(5px);
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: start;
+    color: black;
+    z-index: 1;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.header {
+    font-size: 64px;
+}
+
+.subHeader {
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+}
+
+.btn-custom{
+    background-color: #464646;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 35px;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.btn-custom:hover{
+    background-color: #9e9e9e;
+    color: black;
+    border-radius: 10px;
+    padding: 10px 35px;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+    margin-top: 20px;
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 320) {
+
+}
+
+@media screen and (min-width: 481px) {
+    .circle{
+        width: 650px;
+        height: 650px;
+        border-radius: 700px;
+        background: #464646;
+        position: absolute;
+        top: 1%;
+        right: -25%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .circle{
+        width: 650px;
+        height: 650px;
+        border-radius: 700px;
+        background: #464646;
+        position: absolute;
+        top: 10%;
+        right: -25%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .circle{
+        width: 650px;
+        height: 650px;
+        border-radius: 700px;
+        background: #464646;
+        position: absolute;
+        top: 1%;
+        right: -25%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .circle{
+        width: 950px;
+        height: 950px;
+        border-radius: 900px;
+        background: #464646;
+        position: absolute;
+        top: 1%;
+        right: -25%;
+    }
+}
+
+/* Navbar */
+.navbar{
+    background-color: rgba(217, 217, 217, .5);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar-brand{
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin-left: 50px;
+}
+
+.nav-link{
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    margin-right: 50px;
+}
+
+/* Nosotros */
+.nosotrosH{
+    font-size: 60px;
+    font-weight: semi-bold;
+    color: black;
+}
+
+.nosotros{
+    font-size: 40px;
+    font-weight: semi-bold;
+    color: black;
+}
