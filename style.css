@@ -191,7 +191,6 @@ body {
     color: black;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
 .design-section {
     display: flex;
     flex-direction: column;
@@ -262,4 +261,11 @@ body {
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
     }
+}
+
+/* App */
+.appH {
+    font-size: 60px;
+    font-weight: semi-bold;
+    color: black;
 }
