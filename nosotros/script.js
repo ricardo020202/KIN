@@ -1,12 +1,20 @@
 let isScrolling = false;
 
 function shrink(element) {
+    for (let i = 0; i < element.children.length; i++) {
+        element.children[i].style.color = '#D9D9D9';
+        element.children[i].style.transition = 'color 0.5s ease-in-out';
+    }
     element.style.height = '0px';
     element.style.transform = 'scaleY(0.1)';
     element.style.transition = 'transform 0.5s ease-in-out';
 }
 
 function grow(element) {
+    for (let i = 0; i < element.children.length; i++) {
+        element.children[i].style.color = 'black';
+        element.children[i].style.transition = 'color 0.5s ease-in-out';
+    }
     element.style.transform = 'scale(1)';
     element.style.transition = 'transform 0.5s ease-in-out';
 }

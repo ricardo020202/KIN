@@ -15,39 +15,6 @@ body {
     height: 2000px;
 }
 
-#myDIV {
-    margin: auto;
-    width: 0;
-    height: 0;
-    border-left: 400px solid transparent;
-    border-right: 400px solid transparent;
-    border-bottom: 692px solid transparent;
-    transform-origin: 50% 68%;
-    transform: rotate(0deg);
-    transition: transform 0.5s;
-}
-
-.text {
-    position: absolute;
-    transition: transform 0.5s;
-
-}
-
-#top {
-    top: -50px;
-    left: -65px;
-}
-
-#bottom-left {
-    bottom: -750px;
-    left: -455px;
-}
-
-#bottom-right {
-    bottom: -750px;
-    right: -455px;
-}
-
 /* Banner*/
 .bg-image {
     background-image: url();
@@ -189,6 +156,7 @@ body {
     font-size: 60px;
     font-weight: semi-bold;
     color: black;
+    position: absolute;
 }
 
 .nosotrosHigh {
@@ -210,15 +178,51 @@ body {
     height: 40vh;
     border-radius: 10px;
     color: black;
+    margin: 10px;
 }
 
-.down {
-    font-size: 20px;
-    background-color: #D9D9D9;
-    width: 100vw;
-    height: 2vh;
-    border-radius: 10px;
-    color: black;
+.nos{
+    position: relative;
+    height: 100vh;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+}
+
+#myDIV {
+    position: absolute;
+    top: 12%;
+    left: 19%;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+    border-bottom: 692px solid transparent;
+    transform-origin: 50% 68%;
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+
+.text {
+    position: absolute;
+    transition: transform 0.5s;
+    width: 750px;
+}
+
+#top {
+    top: -40px;
+    left: -370px;
+}
+
+#bottom-left {
+    bottom: -720px;
+    left: -778px;
+}
+
+#bottom-right {
+    bottom: -720px;
+    right: -785px;
 }
 
 /* Nuestros servicios */
