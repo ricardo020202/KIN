@@ -1,13 +1,21 @@
 /* * { outline: 1px solid red; } */
 
 body {
+    width: 100vw;
     height: 10000px;
+
+}
+
+.nos{
+    height: 100vh;
+    position: relative;
+    position: fixed;
 }
 
 #myDIV {
-    position: fixed;
-    top: 10%;
-    left: 30%;
+    position: absolute;
+    top: 15%;
+    left: 40%;
     margin: auto;
     width: 0;
     height: 0;
@@ -22,32 +30,65 @@ body {
 .text {
     position: absolute;
     transition: transform 0.5s;
-
-}
-
-h2{
-    font-size: 50px;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    text-align: center;
+    width: 750px;
 }
 
 #top {
-    top: -50px;
-    left: -65px;
+    top: -40px;
+    left: -370px;
 }
 
 #bottom-left {
-    bottom: -750px;
-    left: -455px;
+    bottom: -720px;
+    left: -778px;
 }
 
 #bottom-right {
-    bottom: -750px;
-    right: -455px;
+    bottom: -720px;
+    right: -785px;
 }
 
 .spacer {
     height: 1000px;
+}
+
+/* Nosotros */
+.nosotrosH {
+    font-size: 60px;
+    font-weight: semi-bold;
+    color: black;
+    position: absolute;
+    top: 2%;
+    left: 20%;
+}
+
+.nosotrosHigh {
+    font-size: 40px;
+    font-weight: semi-bold;
+    color: black;
+}
+
+.nosotros {
+    font-size: 30px;
+    font-weight: semi-bold;
+    color: black;
+}
+
+.up {
+    font-size: 20px;
+    background-color: #D9D9D9;
+    width: 20vw;
+    height: 40vh;
+    border-radius: 10px;
+    color: black;
+    margin: 10px;
+}
+
+.down {
+    font-size: 20px;
+    background-color: #D9D9D9;
+    width: 100vw;
+    height: 2vh;
+    border-radius: 10px;
+    color: black;
 }

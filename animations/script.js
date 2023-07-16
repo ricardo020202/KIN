@@ -1,14 +1,51 @@
-var isScrolling = false;
+let isScrolling = false;
+
+function shrink(element) {
+    element.style.height = '0px';
+    element.style.transform = 'scaleY(0.1)';
+    element.style.transition = 'transform 0.5s ease-in-out';
+}
+
+function grow(element) {
+    element.style.transform = 'scale(1)';
+    element.style.transition = 'transform 0.5s ease-in-out';
+}
+
+function position() {
+    let scrollTop = window.scrollY;
+    let Mision = document.getElementById('Mision');
+    let Vision = document.getElementById('Vision');
+    let Valores = document.getElementById('Valores');
+
+    let rotation = Math.round(scrollTop / window.innerHeight) * 120;
+
+    if (rotation % 360 == 0) {
+        grow(Mision);
+        shrink(Vision);
+        shrink(Valores);
+    } 
+    else if (rotation % 360 == 120) {
+        shrink(Mision);
+        grow(Vision);
+        shrink(Valores);
+    } 
+    else if (rotation % 360 == 240) {
+        shrink(Mision);
+        shrink(Vision);
+        grow(Valores);
+    }
+
+    return rotation;
+}
 
 function smoothScroll() {
-    var element = document.getElementById('myDIV');
-    var texts = document.getElementsByClassName('text');
-    var scrollTop = window.scrollY;
+    let element = document.getElementById('myDIV');
+    let texts = document.getElementsByClassName('text');
 
-    var rotation = Math.round(scrollTop / window.innerHeight) * 120; // Adjust the rotation speed as needed
+    let rotation = position();
     element.style.transform = 'rotate(' + rotation + 'deg)';
 
-    for (var i = 0; i < texts.length; i++) {
+    for (let i = 0; i < texts.length; i++) {
         texts[i].style.transform = 'rotate(' + -rotation + 'deg)';
     }
 
@@ -23,3 +60,5 @@ function scrollHandler() {
 }
 
 window.addEventListener('scroll', scrollHandler); 
+
+position();

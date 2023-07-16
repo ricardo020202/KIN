@@ -11,6 +11,43 @@ body {
     height: 100px;
 }
 
+.XLspacer {
+    height: 2000px;
+}
+
+#myDIV {
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+    border-bottom: 692px solid transparent;
+    transform-origin: 50% 68%;
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+
+.text {
+    position: absolute;
+    transition: transform 0.5s;
+
+}
+
+#top {
+    top: -50px;
+    left: -65px;
+}
+
+#bottom-left {
+    bottom: -750px;
+    left: -455px;
+}
+
+#bottom-right {
+    bottom: -750px;
+    right: -455px;
+}
+
 /* Banner*/
 .bg-image {
     background-image: url();
@@ -233,34 +270,44 @@ body {
     margin: 0px 20px 20px 20px;
 }
 
-@media screen and (min-width: 768px) {
-    .timeline {
-        display: grid;
-        grid-template-columns: 1fr 3px 1fr;
-    }
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+}
 
-    .timeline-middle {
-        position: relative;
-        background-color: #464646;
-        width: 3px;
-        height: 100%;
-    }
+.timeline-middle {
+    position: relative;
+    background-color: #464646;
+    width: 3px;
+    height: 100%;
+}
 
-    .main-middle {
-        opacity: 0;
-    }
+.main-middle {
+    opacity: 0;
+}
 
-    .timeline-circle {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #464646;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-    }
+.timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #464646;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.timeline-number-left{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.timeline-number-right{
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
 /* App */

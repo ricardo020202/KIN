@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+
+            left: 250px;
+            top: 250px;
+            background: red;
+        }
+
+        #myDiv2 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+
+            left: 450px;
+            top: 250px;
+            background: blue;
+        }
+
+        .cont {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        * { outline: 1px solid red; }
+    </style>
+</head>
+
+<body>
+    <button id="btnStart">Start</button> - <button id="btnStop">Stop</button>
+    <hr />
+
+    <div class="cont">
+        <div id="myDiv">Hello World!</div>
+        <div id="myDiv2">Hello World!</div>
+    </div>
+
+
+    <script>
+        // requestAnim shim layer by Paul Irish
+        window.requestAnimFrame = (function () {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (/* function / callback, / DOMElement */ element) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+
+        function CircleAnimater(elem, radius, speed) {
+            this.elem = elem;
+            this.radius = radius;
+            this.angle = 0;
+            this.origX = this.elem.offsetLeft;
+            this.origY = this.elem.offsetTop;
+
+            this.shouldStop = false;
+            this.lastFrame = 0;
+            this.speed = speed;
+        }
+
+        CircleAnimater.prototype.start = function () {
+            this.lastFrame = +new Date;
+            this.shouldStop = false;
+            this.animate();
+        }
+
+        CircleAnimater.prototype.stop = function () {
+            this.shouldStop = true;
+        }
+
+        CircleAnimater.prototype.animate = function () {
+            var now = +new Date,
+                deltaT = now - this.lastFrame;
+
+            var newY = Math.sin(this.angle) * this.radius;
+            var newX = Math.cos(this.angle) * this.radius;
+
+            this.elem.style.left = (this.origX + newX) + "px";
+            this.elem.style.top = (this.origY + newY) + "px";
+            this.angle += (this.speed * deltaT);
+
+            this.lastFrame = +new Date;
+
+            if (!this.shouldStop) {
+                var $this = this;
+                requestAnimFrame(function () {
+                    $this.animate();
+                });
+            }
+        }
+
+        var elem = document.getElementById("myDiv");
+        var elem2 = document.getElementById("myDiv2");
+        var ca = new CircleAnimater(elem, 250, Math.PI / 5000);
+        var ca2 = new CircleAnimater(elem2, -250, -Math.PI / 5000);
+
+        document.getElementById("btnStart").onclick = function () {
+            ca.start();
+            ca2.start();
+        };
+
+        document.getElementById("btnStop").onclick = function () {
+            ca.stop();
+            ca2.stop();
+        }
+    </script>
+</body>
+
+</html>
